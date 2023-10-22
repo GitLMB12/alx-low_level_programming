@@ -32,6 +32,6 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 	str3[j] = '\0';
-	printf("\nConcatenated string: %s", str3);
+	printf("%s", str3);
 	return (0);
 }
