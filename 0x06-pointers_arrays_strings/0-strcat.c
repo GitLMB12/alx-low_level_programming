@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
 *_strcat - function that concatenates two strings.
 *@dest: pointer to destination string.
@@ -32,6 +31,5 @@ char *_strcat(char *dest, char *src)
 		j++;
 	}
 	str3[j] = '\0';
-	printf("%s", str3);
 	return (0);
 }
