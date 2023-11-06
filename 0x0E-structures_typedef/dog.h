@@ -1,9 +1,14 @@
 #ifndef FILE_DOG
 #define FILE_DOG
 
-/* typedef - rename the struct
+#include <stdio.h>
+#include <stdlib.h>
+
+
+/*
+ * typedef - rename the struct
  * my_dog = the name of struct
- */
+*/
 
 typedef struct dog
 {
