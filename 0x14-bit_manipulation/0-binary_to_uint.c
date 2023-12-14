@@ -11,8 +11,8 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int decimal_value = 0;
 	int i;
-	
-	i = 0 ;
+
+	i = 0;
 	if (!b)
 		return (0);
 	while (b[i])
