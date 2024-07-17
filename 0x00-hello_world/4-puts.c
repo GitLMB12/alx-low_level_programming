@@ -1,12 +1,18 @@
 #include <stdio.h>
-/**
- * main - my first c programming
- *
- * Return: 0
-*/
+#include <string.h>
 
+/**
+*main - Main function of my project
+*
+*
+*Return: return 0 everytime
+*/
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
+
+	char displayed[52];
+
+	strcpy(displayed, "\"Programming is like building a multilingual puzzle");
+	puts(displayed);
 	return (0);
 }

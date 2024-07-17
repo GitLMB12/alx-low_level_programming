@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <stdlib.h>
 
 void free_grid(int **grid, int height);
@@ -11,4 +12,4 @@ char **strtow(char *str);
 int **alloc_grid(int width, int height);
 int len(char *str);
 int num_words(char *str);
-#endif
+#endif /* MAIN_H */

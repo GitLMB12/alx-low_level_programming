@@ -1,46 +1,34 @@
 #include "main.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 
 /**
- * create_file - function with two arguments
- * @filename: pointer to string name
- * @text_content: pointer to string contents
+ * create_file - Creates a file.
+ * @filename: A pointer to the name of the file to create.
+ * @text_content: A pointer to a string to write to the file.
  *
- * Description: creates a file
- * Return: 1 on success or -1 failure
+ * Return: If the function fails - -1.
+ * Otherwise - 1.
  */
+
 int create_file(const char *filename, char *text_content)
 {
-	int count = 0;
-	int fd = 0;
-	int output = 0;
+	int o, w, len = 0;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (fd == -1)
-		return (-1);
-
 	if (text_content != NULL)
 	{
-		while (text_content[count] != '\0')
-			count++;
-	}
-	else
-	{
-		close(fd);
-		return (1);
+		for (len = 0; text_content[len];)
+			len++;
 	}
 
-	output = write(fd, text_content, count);
-	if (output == -1 || output != count)
+	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	w = write(o, text_content, len);
+
+	if (o == -1 || w == -1)
 		return (-1);
 
-	close(fd);
+	close(o);
+
 	return (1);
 }
